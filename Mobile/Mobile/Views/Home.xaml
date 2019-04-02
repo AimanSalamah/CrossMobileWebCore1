@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.Home">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label  Text="Subject"/>
+                <Entry Text="{Binding AddClass.Subject}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Description"/>
+                <Entry Text="{Binding AddClass.Description }"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Done"/>
+                <Switch IsToggled="{Binding AddClass.Done}"/>
+            </StackLayout>
+            <Button Text="MyButton" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+            <ListView ItemsSource="{Binding Tasks}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}"/>
+                                <Label Text="{Binding Subject}"/>
+                                <Label Text="{Binding Description}"/>
+                                <Switch IsToggled="{Binding Done}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
