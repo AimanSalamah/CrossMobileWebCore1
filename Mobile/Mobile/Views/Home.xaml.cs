@@ -22,7 +22,6 @@ namespace Mobile.Views
             AddClass = new BLL.Tasks();
             InitializeComponent();
             this.BindingContext = this;
-
         }
         public ObservableCollection<BLL.Tasks> Tasks { get; set; }
         public BLL.Tasks AddClass { get; set; }
