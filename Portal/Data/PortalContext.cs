@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BLL;
 
-namespace API.Models
+namespace Portal.Models
 {
-    public class APIContext : DbContext
+    public class PortalContext : DbContext
     {
-        public APIContext (DbContextOptions<APIContext> options)
+        public PortalContext (DbContextOptions<PortalContext> options)
             : base(options)
         {
         }
 
         public DbSet<BLL.Tasks> Tasks { get; set; }
 
-        public DbSet<BLL.PhoneBooks> PhoneBook { get; set; }
+        public DbSet<BLL.PhoneBooks> PhoneBooks { get; set; }
     }
 }

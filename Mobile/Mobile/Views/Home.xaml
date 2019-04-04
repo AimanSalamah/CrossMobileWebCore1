@@ -4,33 +4,11 @@
              x:Class="Mobile.Views.Home">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                <Label  Text="Subject"/>
-                <Entry Text="{Binding AddClass.Subject}"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Description"/>
-                <Entry Text="{Binding AddClass.Description }"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Done"/>
-                <Switch IsToggled="{Binding AddClass.Done}"/>
-            </StackLayout>
-            <Button Text="MyButton" HorizontalOptions="Center" Clicked="Button_Clicked"/>
-            <ListView ItemsSource="{Binding Tasks}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding ID}"/>
-                                <Label Text="{Binding Subject}"/>
-                                <Label Text="{Binding Description}"/>
-                                <Switch IsToggled="{Binding Done}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tasks" Clicked="TasksButtonClicked"/>
+            <Button Text="Phone Book" Clicked="PhoneBookButtonClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
